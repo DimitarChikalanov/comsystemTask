@@ -1,0 +1,13 @@
+package com.comsystem;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class ComsystemApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ComsystemApplication.class, args);
+    }
+
+}
