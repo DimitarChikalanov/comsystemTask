@@ -9,5 +9,4 @@ public class ComsystemApplication {
     public static void main(String[] args) {
         SpringApplication.run(ComsystemApplication.class, args);
     }
-
 }

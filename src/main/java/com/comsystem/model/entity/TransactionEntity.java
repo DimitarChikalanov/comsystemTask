@@ -1,11 +1,10 @@
 package com.comsystem.model.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "transactions")
@@ -15,7 +14,10 @@ public class TransactionEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "transaction_id_seq")
-    @SequenceGenerator(name = "transaction_id_seq", sequenceName = "transactions_id_seq", allocationSize = 1)
+    @SequenceGenerator(
+            name = "transaction_id_seq",
+            sequenceName = "transactions_id_seq",
+            allocationSize = 1)
     private Long id;
 
     private String itemName;
@@ -29,6 +31,4 @@ public class TransactionEntity {
     private String warehouseName;
 
     private LocalDateTime createdAt = LocalDateTime.now();
-
 }
-
