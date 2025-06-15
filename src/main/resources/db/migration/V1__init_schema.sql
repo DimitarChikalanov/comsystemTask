@@ -5,8 +5,6 @@ CREATE TABLE transactions (
                               unit VARCHAR(50) NOT NULL,
                               unit_price NUMERIC(10, 2) NOT NULL,
                               warehouse_name VARCHAR(255) NOT NULL,
-                              type VARCHAR(20) NOT NULL,
-                              corrects_transaction_id BIGINT,
                               created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 

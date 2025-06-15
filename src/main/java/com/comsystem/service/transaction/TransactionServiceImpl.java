@@ -24,6 +24,7 @@ public class TransactionServiceImpl implements TransactionService {
 
         for (TransactionDto transactionDto : request) {
             TransactionEntity entity = transactionMapper.mapToTransactionEntity(transactionDto);
+            transactionRepository.save(entity);
             inventoryRepository.upsertInventory(
                     entity.getItemName(),
                     entity.getWarehouseName(),
