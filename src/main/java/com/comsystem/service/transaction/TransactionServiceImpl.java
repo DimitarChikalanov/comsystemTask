@@ -21,7 +21,16 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     @Transactional
     public void createTransaction(List<TransactionDto> request) {
+        processTransactions(request);
+    }
 
+    @Override
+    @Transactional
+    public void correctionTransaction(List<TransactionDto> request) {
+        processTransactions(request);
+    }
+
+    private void processTransactions(List<TransactionDto> request) {
         for (TransactionDto transactionDto : request) {
             TransactionEntity entity = transactionMapper.mapToTransactionEntity(transactionDto);
             transactionRepository.save(entity);

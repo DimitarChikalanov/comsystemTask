@@ -6,4 +6,6 @@ import java.util.List;
 public interface TransactionService {
 
     void createTransaction(List<TransactionDto> request);
+
+    void correctionTransaction(List<TransactionDto> request);
 }
