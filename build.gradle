@@ -45,7 +45,7 @@ spotless {
         googleJavaFormat('1.19.2')
                 .aosp()
         target 'src/**/*.java'
-        targetExclude 'src/main/resources/workingFile/**/*.java' // <-- EXCLUDE prototypes
+        targetExclude 'src/main/resources/workingFile/**/*.java'
     }
     format 'misc', {
         target '*.gradle', '*.md', '*.gitignore'

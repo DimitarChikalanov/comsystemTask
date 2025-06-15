@@ -27,6 +27,7 @@ public class TransactionServiceImpl implements TransactionService {
     @Override
     @Transactional
     public void correctionTransaction(List<TransactionDto> request) {
+        //TODO create validation when whrehose transaction not co natin in transaction throw exception
         processTransactions(request);
     }
 
