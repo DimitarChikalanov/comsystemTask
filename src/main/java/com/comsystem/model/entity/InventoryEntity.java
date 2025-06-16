@@ -29,7 +29,7 @@ public class InventoryEntity {
 
     private BigDecimal unitPrice;
 
-    private double quantity;
+    private BigDecimal quantity;
 
     private String unit;
 }

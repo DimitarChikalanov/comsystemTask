@@ -1,7 +1,7 @@
 CREATE TABLE transactions (
                               id BIGINT PRIMARY KEY,
                               item_name VARCHAR(255) NOT NULL,
-                              quantity DOUBLE PRECISION NOT NULL,
+                              quantity NUMERIC(10, 2) NOT NULL,
                               unit VARCHAR(50) NOT NULL,
                               unit_price NUMERIC(10, 2) NOT NULL,
                               warehouse_name VARCHAR(255) NOT NULL,
@@ -13,7 +13,7 @@ CREATE TABLE inventory (
                            item_name VARCHAR(255) NOT NULL,
                            warehouse_name VARCHAR(255) NOT NULL,
                            unit_price NUMERIC(10, 2) NOT NULL,
-                           quantity DOUBLE PRECISION NOT NULL,
+                           quantity NUMERIC(10, 2) NOT NULL,
                            unit VARCHAR(50) NOT NULL,
                            CONSTRAINT unique_item_warehouse_price UNIQUE (item_name, warehouse_name, unit_price)
 );

@@ -5,6 +5,7 @@ import com.comsystem.model.dto.TransactionDto;
 import com.comsystem.model.entity.TransactionEntity;
 import com.comsystem.repository.InventoryRepository;
 import com.comsystem.repository.TransactionRepository;
+import com.comsystem.service.validation.TransactionValidation;
 import jakarta.transaction.Transactional;
 import java.util.List;
 import lombok.AllArgsConstructor;
@@ -17,17 +18,19 @@ public class TransactionServiceImpl implements TransactionService {
     private final TransactionMapper transactionMapper;
     private final TransactionRepository transactionRepository;
     private final InventoryRepository inventoryRepository;
+    private final TransactionValidation transactionValidation;
 
     @Override
     @Transactional
     public void createTransaction(List<TransactionDto> request) {
+        transactionValidation.validateTransactionRequest(request);
         processTransactions(request);
     }
 
     @Override
     @Transactional
     public void correctionTransaction(List<TransactionDto> request) {
-        //TODO create validation when whrehose transaction not co natin in transaction throw exception
+        transactionValidation.validateTransactionRequest(request);
         processTransactions(request);
     }
 

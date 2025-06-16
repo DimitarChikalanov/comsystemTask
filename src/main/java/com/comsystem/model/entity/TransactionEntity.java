@@ -22,7 +22,7 @@ public class TransactionEntity {
 
     private String itemName;
 
-    private double quantity;
+    private BigDecimal quantity;
 
     private String unit;
 

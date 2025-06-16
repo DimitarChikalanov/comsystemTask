@@ -25,6 +25,6 @@ public interface InventoryRepository extends JpaRepository<InventoryEntity, Long
             @Param("itemName") String itemName,
             @Param("warehouseName") String warehouseName,
             @Param("unitPrice") BigDecimal unitPrice,
-            @Param("quantity") double quantity,
+            @Param("quantity") BigDecimal quantity,
             @Param("unit") String unit);
 }
