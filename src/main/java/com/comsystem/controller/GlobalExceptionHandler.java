@@ -1,5 +1,7 @@
-package com.comsystem.error;
+package com.comsystem.controller;
 
+import com.comsystem.error.ConstraintViolationException;
+import com.comsystem.error.ErrorType;
 import com.comsystem.model.dto.ErrorResponseDto;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.support.DefaultMessageSourceResolvable;
