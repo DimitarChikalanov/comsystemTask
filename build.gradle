@@ -59,5 +59,6 @@ tasks.named('build') {
     dependsOn 'spotlessApply'
 }
 
-//tasks.named('test') {
-//}
+tasks.named('test') {
+    useJUnitPlatform()
+}
